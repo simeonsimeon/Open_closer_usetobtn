@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height:200px;
+            background-color: bisque;
+            text-align: center;
+            justify-content: center;
+                }
+    </style>
+</head>
+<body>
+    <div class="status">
+        <h1>To Check Status</h1>
+        <select id="sel">
+           <option value="Open">Open</option>
+           <option value="Close">Close</option>
+         </select>
+         <h1 id="display"></h1>
+         <button id="submit">Submit</button>
+ </div>
+    <script>
+        let select=document.getElementById("sel");
+        let submit=document.getElementById("submit");
+        let h1=document.getElementById("display");
+    submit.addEventListener("click",function(){
+        if(select.value=="Open"){
+            h1.innerHTML="we choose"+select.value;
+        }else if(select.value=="Close"){
+            h1.innerHTML="we choose"+select.value;
+        }else {
+            h1.innerHTML="Nothing";
+        }
+    })
+
+        
+    </script>
+    
+</body>
+</html>
